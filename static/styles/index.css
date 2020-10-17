@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Picture section starts here */
+ section {
+    width: 100vw;
+    height: 650px;
+    background: url("/static/images/boiler3.png");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    align-items: center;
+}
+
+/* 
+li, a , button { 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+nav {
+    display: flex;
+    padding : 30px 10%;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav_links li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a  {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.nav_links li a:hover {
+    transition: all 0.3s ease 0s;
+    color: orange;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+
+}
+--- */
+.nav {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    color: lightblue;
+ 
+    /* background-color:white; */
+
+    /* height: 10%; */
+
+}
+
+
+
+#links {
+    display: grid;
+    grid-template-columns: 2;
+    grid-auto-flow: column;
+}
+
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+
+}
+
+
+li {
+    list-style: none;
+    display: inline;
+    margin: auto;
+    padding: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: #f4f6ff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 16px;
+
+} 
+
+li a:hover {
+    color: black;
+    
+} 
+
+.contact {
+    position: relative;
+    top: 120px;
+    left: 30px;
+    font-size: 40px;
+    color: #f4f6ff;
+}
+
+/* .contact h1 {
+    padding: 0;
+} */
+
+button {
+    top: 0;
+}
+/* 
+.img1 {
+    width: 25%;
+} */
+
+/* Content Section Begins here */
+
+main {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+        "description description description"
+        "service service service"
+        "review review review"
+        "footer footer footer"
+}
+
+.description {
+    padding: 30px 0 30px 0;
+    grid-area: description;
+    text-align: center;
+    /* background:lighlight#f4f6ff; */
+    font-size: 18px;
+}
+
+.service {
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    grid-area: service;
+    /* background: #dddddd; */
+    display: grid;
+    background: white;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    text-align: center;
+    grid-template-areas: 
+        "title title title title"
+        "service1 service2 service3 service4";
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px; */
+    /* border-radius: 20% */
+}
+
+.service-title {
+    grid-area: title;
+}
+
+.service1 {
+    grid-area: service1;
+    background: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.7);
+    text-align:left;
+    /* border-radius: 1% */
+    
+
+}
+
+.card__image {
+    width: 100%;
+    display: block;
+
+  
+}
+
+.card__content {
+    /* line-height: 1.5; */
+    /* font-size: 0.9em; */
+    padding: 15px;
+    background: #fafafa;
+    margin: 0;
+}
+
+.card__content > p:first-of-type {
+    margin-top: 0 
+}
+
+.card__content > p:first-of-type {
+    margin-bottom: 0 
+}
+.service2 {
+    grid-area: service2;
+    background:light#f4f6ff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.7) ;
+    text-align: left;
+
+
+}
+.service3 {
+    grid-area: service3;
+    background:light#f4f6ff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.7) ;
+    text-align: left;
+
+
+}
+.service4 {
+    grid-area: service4;
+    background:light#f4f6ff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.7) ;
+}
+
+
+.reviews {
+    grid-area: review;
+
+    text-align: center;
+    display: grid;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 140%;
+}
+
+hr {
+    width: 30px;
+    border: 10px 0 0 0  dotted black;
+}

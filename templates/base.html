@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title %}{% endblock %}</title>
+    {% block css %} {% endblock %}
+    <script src="https://kit.fontawesome.com/d7a4ce9781.js" crossorigin="anonymous"></script>
+    {% endblock %}
+</head>
+<body>
+    <!-- <div class="socials">
+        <ul>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+        </ul> -->
+    </div>
+    <div class="nav">
+        <div id="logo">
+            <img src = "/static/images/logo25.svg" height=150px alt = "logo">
+        </div>
+        <!-- <h1 style=>24/7 Berkshire Plumbers</h1> -->
+
+        <ul class="nav_links">
+            <li><a href = '#'><h1>Home</h1></a></li>
+            <li><a href = '#'><h1>Services</h1></a></li>
+            <li><a href = '#'><h1>Contact</h1></a></li>
+        </ul> 
+    </div>
+    
+    <div class="main">
+        {% block main %} {% endblock %}
+
+    </div>
+
+    <div class="footer">
+        {% block footer %} {% endblock %} 
+    </div>
+
+</body>
+</html>
